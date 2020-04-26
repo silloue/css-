@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .warpper{
+            position: relative;
+            width:200px;
+            height:200px;
+            transform-style: preserve-3d;
+            margin-top:200px;
+            margin-left:200px;
+            font-size:30px;
+            animation:move 3s linear infinite;
+        }
+
+        .warpper div{
+            position: absolute;
+            width:200px;
+            height: 200px;
+            opacity: 0.5;
+            text-align: center;
+            line-height: 200px;
+            color:#fff;
+        }
+        .warpper .item1{
+            background-color: red;
+            transform:rotateY(0deg) translateZ(180px);
+        }
+        .warpper .item2{
+            background-color: green;
+            transform:rotateY(60deg) translateZ(180px);
+        }
+        .warpper .item3{
+            background-color: blue;
+            transform:rotateY(120deg) translateZ(180px);
+        }
+        .warpper .item4{
+            background-color: orange;
+            transform:rotateY(180deg) translateZ(180px);
+        }
+        .warpper .item5{
+            background-color: deeppink;
+            transform:rotateY(240deg) translateZ(180px);
+        }
+        .warpper .item6{
+            background-color: purple;
+            transform:rotateY(300deg) translateZ(180px);
+        }
+        @keyframes move {
+            0%{
+                transform:rotateX(20deg) rotateY(0deg);
+            }
+            100%{
+                transform:rotateX(20deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="warpper">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6"></div>
+    </div>
+</body>
+</html>
